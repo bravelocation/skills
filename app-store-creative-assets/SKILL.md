@@ -26,6 +26,8 @@ Create high-quality, production-ready static images for the App Store product pa
 - Check both assets at a realistic mobile listing size, not only at full resolution. The logo and app name must be immediately legible; the purpose line should remain readable and explicit. If the copy or mark is too small, simplify and enlarge it before delivery.
 - Keep the whole lockup centered and within a generous crop-safe area. For a vertical logo-and-copy lockup, put the mark above the app name and purpose line, with deliberate top and bottom padding. Make the logo and type large enough to use the available safe area while retaining that padding.
 - For wide horizontal lockups, measure and center the complete visible group, including the mark, the text block, and the gap between them. Keep generous left and right margins; do not let the mark sit close to an edge just because the full canvas looks centered. Preview tighter horizontal crops at realistic display sizes, then move the whole group inward or reduce its width while preserving a deliberate mark-to-type gap.
+- When a placement may be center-cropped, preview the actual tighter crop at realistic display size and check that the complete lockup, especially every word, retains breathing room inside it. Do not assume a centered composition is automatically crop-safe.
+- When Apple supports multiple aspect ratios for a placement, consider exporting a matching variant for each relevant ratio instead of relying on one image to crop well everywhere. Keep the campaign consistent and adapt scale and spacing to each canvas. Confirm dimensions and formats against Apple’s current specifications.
 
 ## Compose for App Store placements
 
