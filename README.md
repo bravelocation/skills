@@ -12,10 +12,22 @@ Install both skills for Codex:
 npx skills add https://github.com/bravelocation/skills --skill adversarial-bug-hunt --skill app-store-creative-assets --agent codex
 ```
 
+To install the code review skill as well:
+
+```sh
+npx skills add https://github.com/bravelocation/skills --skill code-review --agent codex
+```
+
 To install one skill, use its directory name:
 
 ```sh
 npx skills add https://github.com/bravelocation/skills --skill app-store-creative-assets --agent codex
+```
+
+Or install `code-review` by itself:
+
+```sh
+npx skills add https://github.com/bravelocation/skills --skill code-review --agent codex
 ```
 
 Add `--global` to make the skills available across projects. Without it, the CLI installs them for the current project. Omit `--agent codex` to choose an agent interactively or specify another supported agent, such as `claude-code` or `cursor`.
