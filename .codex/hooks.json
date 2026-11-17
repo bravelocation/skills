@@ -1,0 +1,18 @@
+{
+  "description": "Filter raw Xcode build and test output through xcsift.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "^Bash$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$(git rev-parse --show-toplevel)/hooks/require-xcsift.sh\"",
+            "timeout": 5,
+            "statusMessage": "Checking for unfiltered Xcode output"
+          }
+        ]
+      }
+    ]
+  }
+}
