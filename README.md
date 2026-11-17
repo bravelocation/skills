@@ -60,30 +60,4 @@ From the repository root, install the two command-line dependencies:
 brew install jq xcsift
 ```
 
-Open this repository in Codex. Codex reads `.codex/hooks.json` from a trusted project. In Codex, open `/hooks`, inspect the `require-xcsift.sh` hook, and trust it. It will then apply in this repository. `xcodebuild -list` and commands already using `xcsift` are left alone.
-
-### Install for all your Codex projects
-
-The repo's `.codex/hooks.json` is project-scoped. For a user-wide hook, keep the script in this clone (or copy it to a stable location), then add this entry to `~/.codex/hooks.json`. If that file already exists, merge the `PreToolUse` entry into its existing `hooks` object rather than replacing the file. Replace `/absolute/path/to/skills` with this repository's actual path.
-
-```json
-{
-  "hooks": {
-    "PreToolUse": [
-      {
-        "matcher": "^Bash$",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "bash \"/absolute/path/to/skills/hooks/require-xcsift.sh\"",
-            "timeout": 5,
-            "statusMessage": "Checking for unfiltered Xcode output"
-          }
-        ]
-      }
-    ]
-  }
-}
-```
-
-Restart or reload Codex if needed, then open `/hooks` to review and trust the user-level hook. Codex records trust for the specific hook definition and asks for review again if it changes. See [Codex hooks documentation](https://developers.openai.com/codex/hooks) for hook locations, trust, and configuration details.
+For exact setup steps, approval instructions, and troubleshooting—including user-wide installation—see [hooks/README.md](hooks/README.md).
